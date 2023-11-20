@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Cubos Angular</h1>
+    <table class="table table-dark table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Marca</th>
+                <th>-</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cubo of cubos">
+                <td>{{cubo.idCubo}}</td>
+                <td>{{cubo.nombre}}</td>
+                <td><img src="{{cubo.imagen}}" style="width: 200px; height: 200px;" alt="imagen"></td>
+                <td>{{cubo.marca}}</td>
+                <td>
+                    <button class="btn btn-warning" [routerLink]="['detallescubo', cubo.idCubo]">
+                        Detalles
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

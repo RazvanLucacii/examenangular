@@ -22,7 +22,35 @@ export class ServiceCubos {
         var promise = new Promise((resolve) =>{
             this._http.get(url, {headers}).subscribe(response =>{
                 resolve(response);
-                
+            })
+        })
+        return promise;
+    }
+
+    getMarcas(): Promise<any>{
+        var request = "api/cubos/marcas";
+        var url = environment.apiUrls + request;
+        var headers = new HttpHeaders({
+            'Content-Type': 'application/json',
+        })
+        var promise = new Promise((resolve) =>{
+            this._http.get(url, {headers}).subscribe(response =>{
+                resolve(response);
+            })
+        })
+        return promise;
+    }
+
+    findmarcas(marca: string): Promise<any>{
+        var request = "api/cubos/cubosmarca/" + marca;
+        var url = environment.apiUrls + request;
+        var headers = new HttpHeaders({
+            'Content-Type': 'application/json',
+        })
+        var promise = new Promise((resolve) =>{
+            this._http.get(url, {headers}).subscribe(response =>{
+                resolve(response);
+            })
         })
         return promise;
     }

@@ -1,1 +1,12 @@
-<p>cubomarcas works!</p>
+<div class="container text-center">
+    <div *ngFor="let cubo of cubos">
+        <h1>Cubos de la marca {{ this.cubo.marca }}</h1>
+        <div class="card" style="width: 18rem;">
+            <img :src="this.cubo.imagen" class="card-img-top" alt="Imagen">
+            <div class="card-body">
+                <p class="card-title" style="color: orange">{{ this.cubo.nombre }}</p>
+                <p class="card-text" style="color: orange">{{ this.cubo.precio }} €</p>
+            </div>
+        </div>  
+    </div>
+</div>

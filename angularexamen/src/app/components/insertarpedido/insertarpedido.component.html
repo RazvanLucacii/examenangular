@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Nuevo Pedido</h1>
+    <select class="form-control" #cajaidcubo name="cajaidcubo">
+        <option value="{{cubo.idCubo}}" *ngFor="let cubo of cubos">
+            {{cubo.nombre}}
+        </option>
+    </select>
+    <br/>
+    <button class="btn btn-success" (click)="insertarPedido()">Insertar Pedido</button>
+</div>

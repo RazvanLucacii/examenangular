@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body" *ngFor="let pedido of pedidos">
+            <h5 class="card-title">Pedido nº{{pedido.idPedido}}</h5>
+            <p class="card-text">Usted ordeno un pedido con id: {{pedido.idPedido}}
+            en la fecha de: {{pedido.fechaPedido}}</p>
+        </div>
+      </div>
+</div>

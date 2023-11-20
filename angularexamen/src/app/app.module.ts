@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { appRoutingProvider, routing } from './app.routing';
 import { ServiceLogin } from './services/service.login';
 import { ServiceCubos } from './services/service.cubos';
+import { PerfilusuarioComponent } from './components/perfilusuario/perfilusuario.component';
+import { ComprasusuarioComponent } from './components/comprasusuario/comprasusuario.component';
+import { InsertarpedidoComponent } from './components/insertarpedido/insertarpedido.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ServiceCubos } from './services/service.cubos';
     CubosComponent,
     LoginComponent,
     RegistroComponent,
-    CubomarcasComponent
+    CubomarcasComponent,
+    PerfilusuarioComponent,
+    ComprasusuarioComponent,
+    InsertarpedidoComponent
   ],
   imports: [
     BrowserModule, routing, HttpClientModule, FormsModule,

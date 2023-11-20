@@ -1,1 +1,18 @@
-<p>registro works!</p>
+<div class="container">
+    <h1>Login Angular</h1>
+    <form #ngalumnos="ngForm">
+        <label class="form-control">ID</label>
+        <input [defaultValue]="0" type="text" #cajaid name="cajaid" class="form-control" disabled />
+        <label class="form-control">Nombre</label>
+        <input type="text" #cajanombre name="cajanombre" class="form-control" />
+        <label class="form-control">Email</label>
+        <input type="text" #cajaemail name="cajaemail" class="form-control" />
+        <label class="form-control">Password</label>
+        <input type="password" #cajapassword name="cajapassword" class="form-control" />
+        <label class="form-control">Repetir Password</label>
+        <input type="password" class="form-control" />
+        <button class="btn btn-success" (click)="registro()">Registro</button>
+    </form>
+
+</div>
+

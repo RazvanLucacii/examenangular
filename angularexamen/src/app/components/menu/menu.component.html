@@ -6,17 +6,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Cubos</a>
-          </li>    
-          <li class="nav-item dropdown">
+        </li>    
+        <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Marcas
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li class="nav-item" *ngFor="let marca of marcas">
-                    <router-link class="dropdown-item" [routerLink]="['/cubomarcas/' + marca.marca]">
-                        {{ marca.marca }}
+                    <router-link class="dropdown-item" [routerLink]="['/cubomarcas/' + marca]">
+                        {{ marca }}
                     </router-link>
                 </li>
             </ul>
@@ -24,6 +24,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['login']">Login</a>
           </li>       
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['registro']">Registro</a>
+          </li>            
         </ul>
       </div>
     </div>

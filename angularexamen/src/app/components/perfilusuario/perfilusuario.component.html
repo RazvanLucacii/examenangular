@@ -1,0 +1,12 @@
+<div class="container text-center">
+    <h1>Mi perfil</h1>
+    <h1>{{ usuario.email }}</h1>
+    <form>
+        <label class="form-label">Nombre</label>
+        <input class="form-control" [defaultValue]="usuario.nombre" type="text" />
+        <label class="form-label">Numero de telefono</label>
+        <input class="form-control" [defaultValue]="123456789" type="text" />
+        <label class="form-label">Direccion</label>
+        <input class="form-control" [defaultValue]="'Calle De Prueba'" type="text" />
+    </form>
+</div>

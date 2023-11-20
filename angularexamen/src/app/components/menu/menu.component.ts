@@ -13,7 +13,13 @@ import { ServiceCubos } from 'src/app/services/service.cubos';
     ){}
     
     ngOnInit(): void {
-      this.marcas = this._serviceCubos.getCubos();
+      this.mostrarMarcas();
+    }
+
+    mostrarMarcas() {
+      this._serviceCubos.getMarcas().then(response =>{
+        this.marcas = response;
+      })
     }
     
   }

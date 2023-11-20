@@ -19,7 +19,7 @@ export class CubosComponent {
     }
 
   mostrarCubos() {
-    this._serviceCubos.getCubos().subscribe(response =>{
+    this._serviceCubos.getCubos().then(response =>{
       this.cubos = response;
     })
   }

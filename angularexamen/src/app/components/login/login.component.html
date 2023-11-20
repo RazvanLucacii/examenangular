@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="container">
+    <h1>Login Angular</h1>
+    <form #ngalumnos="ngForm">
+        <label class="form-control">Email</label>
+        <input type="text" #cajaemail name="cajaemail" class="form-control" />
+        <label class="form-control">Password</label>
+        <input type="password" #cajapassword name="cajapassword" class="form-control" />
+        <button class="btn btn-success" (click)="login()">Login</button>
+    </form>
+    <br/>
+    <div *ngFor="let cubo in cubos">
+        <router-link class="btn btn-success" aria-current="page" [routerLink]="['/perfilusuario']">Perfil usuario</router-link>
+        <router-link class="btn btn-info" aria-current="page" [routerLink]="['/compras']">Compras</router-link>
+        <router-link class="btn btn-warning" aria-current="page" [routerLink]="['/insertarpedido/' + cubo.idcubo]">Insertar Pedido</router-link>
+    </div>
+</div>
